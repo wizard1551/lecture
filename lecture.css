@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #000;
   overflow-y: auto;
-  overflow-x:hidden;
+  direction: ltr;
   color: #fff;
   
 }
@@ -54,6 +54,7 @@ body.light #themeToggle {
   touch-action: none;
   will-change: transform;
   transform: translateZ(0);
+  inset: 0;
 }
 
 .wrapper {
@@ -144,6 +145,7 @@ nav a:hover {
   max-width: 900px;
   box-sizing: border-box;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .card  {
