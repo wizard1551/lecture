@@ -155,9 +155,9 @@ footer {
 
 @media (max-width: 480px)  {
   .card {
-    font-size: 13px;
+    font-size: 15px;
   }
   h1 ,h3 ,h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
