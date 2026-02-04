@@ -1,21 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  try {
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      alert("ابتدا باید وارد شوید!");
-      return (window.location.href = "login.html");
-    }
-  } catch (e) {
-    return (window.location.href = "login.html");
-  }
 
-
-  const user = localStorage.getItem("currentUser") || "admin";
-  const profileUserEl = document.getElementById("profileUser");
-  if (profileUserEl) profileUserEl.textContent = user;
-
-  const welcomeEl = document.getElementById("welcomeUser");
-  if (welcomeEl) welcomeEl.textContent = `خوش آمدی، ${user}!`;
 
 
   const themeToggle = document.getElementById("themeToggle");
@@ -36,15 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", "dark");
         themeToggle.textContent = "برو به روشن";
       }
-    });
-  }
-
-  const logoutBtn = document.getElementById("logoutBtn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("isLoggedIn");
-      alert("شما خارج شدید!");
-      window.location.href = "index.html";
     });
   }
 
