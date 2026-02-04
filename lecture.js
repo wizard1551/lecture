@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (themeToggle) {
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.body.classList.add(savedTheme);
-    themeToggle.textContent = savedTheme === "dark" ? "برو به روشن" : "برو به تاریک";
+    themeToggle.textContent = savedTheme === "dark" ? "Light" : "Dark";
 
     themeToggle.addEventListener("click", () => {
       if (document.body.classList.contains("dark")) {
         document.body.classList.remove("dark");
         document.body.classList.add("light");
         localStorage.setItem("theme", "light");
-        themeToggle.textContent = "برو به تاریک";
+        themeToggle.textContent = "Dark";
       } else {
         document.body.classList.remove("light");
         document.body.classList.add("dark");
         localStorage.setItem("theme", "dark");
-        themeToggle.textContent = "برو به روشن";
+        themeToggle.textContent = "Light";
       }
     });
   }
